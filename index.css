@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Monoton&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+
+}
+nav{
+    background: #e4fbff;
+   
+    
+}
+.section{
+    background-color: #e4fbff;
+    width: 100%;
+    height:90vh ;
+
+}
+h1{
+    font-family: Monoton;
+    color: #7868e6;
+    
+    
+}
+
+a{
+    font-family:'Bree Serif', serif;
+}
+
+.img{
+    border: 2px solid black;
+}
+.section2{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+   
+}
+.conatain{
+    position: relative;
+    width: 1280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.conatain .cards{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background:linear-gradient(#5a98c2,#5a98c2 30% , #171522, #171522 30%);
+    margin:10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.conatain .cards .imgBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ;
+    z-index: 1000;
+    transform-origin: top;
+    border-radius: 20px;
+    overflow: hidden;
+    
+}
+.conatain .cards:hover .imgBox{
+    transform: translateY(30px) scale(0.5)
+}
+.conatain .cards .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.conatain .cards .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom:30px;
+    transform:translateY(100%);
+    transition:0.5s;
+}
+.conatain .cards:hover .content{
+    transform:translateY(0);
+}
+.content .details{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    text-align: center;
+}
+.content .details h2{
+    color: #fff;
+    font-size:1.5em;
+    font-weight: 500;
+    font-family:'Bree Serif', serif;
+}
+.content .details h2 span{
+    font-size: 0.8em;
+    font-weight:400;
+    color:#5a98c2;
+    font-family:'Bree Serif', serif;
+}
+.social{
+    position: relative;
+    display: flex;
+    margin-top:5px;
+}
+.social li{
+    list-style: none;
+    margin: 4px;
+}
+.social li a{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background:#47546d;
+    border-radius: 5px;
+    text-decoration: none;
+    color:#fff;
+    transition: 0.5s;
+}
+.social li a:hover{
+    transform:rotate(360deg);
+    background:rgb(10, 50, 182);
+}
+@media (max-width: 768px){
+    .painter{
+        width: 300px;
+    }
+    .conatain .cards{
+        width: 300px;
+        height: 400px;
+    }
+}
